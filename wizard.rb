@@ -1,5 +1,3 @@
-require 'readline'
-
 $LOAD_PATH.unshift File.join(__dir__, 'lib')
 $LOAD_PATH.unshift File.join(__dir__, 'data')
 
