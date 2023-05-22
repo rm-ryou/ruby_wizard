@@ -1,5 +1,5 @@
 {
-  "living": "you are in the living-room.\\na wizard is snoring loudly on the couch.",
-  "garden": "you are in a beautiful garden.\\nthere is a well in front of you.",
-  "attic":   "you are in the attic.\\nthere is a giant welding torch in the corner."
+  "living": "you are in the living-room.\na wizard is snoring loudly on the couch.",
+  "garden": "you are in a beautiful garden.\nthere is a well in front of you.",
+  "attic":   "you are in the attic.\nthere is a giant welding torch in the corner."
 }
