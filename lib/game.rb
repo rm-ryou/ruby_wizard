@@ -4,20 +4,29 @@ class Game
   end
 
   def start
-    line = get_input
-    puts line
-    @engine.exec(line)
-    start
+    # puts @engine.help
+    repl
   end
+
 
   private
 
+  def repl
+    line = get_input
+    if line.size > 2
+      puts "too many args."
+    else
+      command, option = line.tap { self }
+      @engine.exec_operation(command, option)
+    end
+    repl
+  end
+
   def get_input
-    # stty_save = `stty -g`.chomp
     begin
-      Readline.readline("> ", true)
+      print "\n> "
+      gets.chomp.split(/\s/)
     rescue Interrupt
-      # system("sttry", stty_save)
       exit
     end
   end
