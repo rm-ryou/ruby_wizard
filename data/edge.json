@@ -1,0 +1,5 @@
+{
+  "living": ["WEST DOOR", "UPSTAIRS LADDER"],
+  "garden": ["EAST DOOR"],
+  "attic":  ["DOWNSTAIRS LADDER"]
+}
