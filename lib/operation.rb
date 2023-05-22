@@ -19,18 +19,43 @@ class Operation
   end
 
   def look(option)
+    if option
+      return puts "invalid option."
+    end
     puts @scenery[player.current_place].upcase
+    @objects[player.current_place]&.each do |obj|
+      puts "YOU SEE A #{obj} ON THE FLLOR"
+    end
+    direction, obj = get_path
+    direction.size.times do |i|
+      puts "THERE IS A #{obj[i]} GOING #{direction[i]} FROM HERE."
+    end
   end
 
   def walk(option)
+    puts @edge[player.current_place]
     puts option
   end
 
+  def get_path
+    direction, obj = [], []
+    @edge[player.current_place].each do |str|
+      tmp_direction, tmp_obj = str.chomp.split(' ').map(&:to_s)
+      direction.push(tmp_direction)
+      obj.push(tmp_obj)
+    end
+    return direction, obj
+  end
+
   def pickup(option)
+    puts @objects[player.current_place]
     puts option
   end
 
   def inventory(option)
+    if option
+      return puts "invalid option"
+    end
     if player.has_item?
       puts player.get_items
     else
@@ -39,6 +64,10 @@ class Operation
   end
 
   def help(option)
+    if option
+      return puts "invalid option"
+    end
     puts @help
   end
 end
+
