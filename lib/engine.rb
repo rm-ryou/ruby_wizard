@@ -10,7 +10,7 @@ class Engine
   end
 
   def exec_operation(command, option)
-    if @operator.respond_to?(command, true)
+    if command && @operator.respond_to?(command, true)
       @operator.send command, option
     elsif command == 'quit'
       exit
