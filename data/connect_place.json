@@ -1,0 +1,5 @@
+{
+  "living": ["east", "downstairs"],
+  "garden": ["west"],
+  "attic": ["upstairs"]
+}
