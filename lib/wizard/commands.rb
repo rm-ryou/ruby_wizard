@@ -1,10 +1,3 @@
-module Wizard::Commands
-
-  autoload :Command,    'wizard/commands/command'
-
-  autoload :Look,       'wizard/commands/look'
-  autoload :Walk,       'wizard/commands/walk'
-  autoload :Pickup,     'wizard/commands/pickup'
-  autoload :Inventory,  'wizard/commands/inventory'
-  autoload :Help,       'wizard/commands/help'
-end
+require_relative "commands/command"
+require_relative "commands/look"
+require_relative "commands/help"

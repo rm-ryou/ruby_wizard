@@ -1,5 +1,8 @@
-class Wizard::Commands::Help < Wizard::Commands::Command
-  HELP_MSG =<<EOM.freeze
+module Wizard
+  module Commands
+    class Help < Wizard::Commands::Command
+
+      HELP_MSG =<<EOM.freeze
 This is a text adventure game!
 There are three areas here, the living-room, the attic, and the garden, where you can come and go as you please.
 
@@ -12,7 +15,9 @@ Commands
   quit:       Exit from the game.
 EOM
 
-  def help
-    puts HELP_MSG
+      def help
+        puts HELP_MSG
+      end
+    end
   end
 end

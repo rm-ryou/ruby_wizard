@@ -1,4 +1,2 @@
-module Wizard
-  autoload :Commands, 'wizard/commands'
-  autoload :Wizard,   'wizard/wizard'
-end
+require "wizard/commands"
+require "wizard/wizard"
