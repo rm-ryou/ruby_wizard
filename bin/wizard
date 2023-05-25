@@ -3,4 +3,4 @@
 $LOAD_PATH.unshift File.join(__dir__, '../lib')
 require 'wizard'
 
-
+Wizard::Commands::Command.new.run
