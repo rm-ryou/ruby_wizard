@@ -15,8 +15,17 @@ Commands
   quit:       Exit from the game.
 EOM
 
-      def help
-        puts HELP_MSG
+      def initialize(option)
+        # TODO optionがあればエラー
+        @option = option
+      end
+
+      def exec
+        if !!@option
+          puts "No option are included in this command."
+        else
+          puts HELP_MSG
+        end
       end
     end
   end
