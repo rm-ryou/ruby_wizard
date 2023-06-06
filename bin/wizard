@@ -1,6 +1,7 @@
 #! /usr/bin/env ruby
 
 $LOAD_PATH.unshift File.join(__dir__, '../lib')
-require 'wizard'
+require "wizard"
 
-Wizard::Commands::Command.new.run
+# puts "test"
+Wizard::Controller.new.repl

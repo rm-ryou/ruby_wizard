@@ -1,6 +1,0 @@
-require "wizard/location"
-require "wizard/object"
-require "wizard/edge"
-require "wizard/connect_place"
-require "wizard/logic"
-require "wizard/controller"
