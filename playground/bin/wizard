@@ -4,4 +4,4 @@ $LOAD_PATH.unshift File.join(__dir__, '../lib')
 require "wizard"
 
 # puts "test"
-Wizard::Command.new
+Wizard::Controller.new.repl

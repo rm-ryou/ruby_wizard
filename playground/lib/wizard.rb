@@ -1,2 +1,5 @@
 require "wizard/location"
-require "wizard/command"
+require "wizard/object"
+require "wizard/edge"
+require "wizard/logic"
+require "wizard/controller"

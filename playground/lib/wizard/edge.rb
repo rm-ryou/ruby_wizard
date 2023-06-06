@@ -1,11 +1,18 @@
 module Wizard::Edge
   def initialize
-    @living = { west: "door", upstairs: "ladder" }
-    @garden = { east: "door" }
-    @attic  = { downstairs: "ladder" }
+    super
+    @edge_living = { west: "door", upstairs: "ladder" }
+    @edge_garden = { east: "door" }
+    @edge_attic  = { downstairs: "ladder" }
   end
 
-  def describe_edge(directioin, object)
-    "there is a #{object} going #{directioin} from here."
+  def describe_edge(place)
+    eval <<-END_OF_DEF
+      msg = []
+      @edge_#{place}.each do |key, val|
+        msg << "there is a " + val + " going " + key.to_s + " from here."
+      end
+      msg
+    END_OF_DEF
   end
 end
