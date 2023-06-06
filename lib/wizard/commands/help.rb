@@ -16,16 +16,12 @@ Commands
 EOM
 
       def initialize(option)
-        # TODO optionがあればエラー
         @option = option
       end
 
       def exec
-        if !!@option
-          puts "No option are included in this command."
-        else
-          puts HELP_MSG
-        end
+        return "No option are included in this command." if !!@option
+        HELP_MSG
       end
     end
   end

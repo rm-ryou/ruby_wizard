@@ -1,3 +1,0 @@
-class Wizard::Player
-
-end

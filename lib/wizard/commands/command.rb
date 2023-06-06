@@ -1,16 +1,22 @@
 module Wizard
   module Commands
     class Command
+      attr_accessor :cur_location
+
+      def initialize
+        @cur_location = :living
+      end
 
       def run
         line = get_input
-        exit if line.match(/quit\s\w+/i)
+        # exit if line.match(/quit/i)
+        exit if /quit/i.match(line)
         line = line.split(/\s/)
         if line.size > 2
           puts "too many argument."
         else
           command = get_command_instance(line[0], line[1]) unless line.empty?
-          command&.exec
+          puts command&.exec
         end
         run
       end
