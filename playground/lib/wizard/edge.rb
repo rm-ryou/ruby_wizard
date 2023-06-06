@@ -15,4 +15,10 @@ module Wizard::Edge
       msg
     END_OF_DEF
   end
+
+  def get_edge(place)
+    eval <<-END_OF_DEF
+      @edge_#{place}.keys
+    END_OF_DEF
+  end
 end

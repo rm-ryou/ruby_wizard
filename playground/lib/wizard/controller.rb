@@ -33,7 +33,7 @@ module Wizard
       when /look/i
         Logic::Look.new
       when /walk/i
-        puts "walk"
+        Logic::Walk.new
       when /inventory/i
         Logic::Inventory.new
       when /pickup/i
