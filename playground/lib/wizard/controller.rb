@@ -37,7 +37,7 @@ module Wizard
       when /inventory/i
         Logic::Inventory.new
       when /pickup/i
-        puts "pickup"
+        Logic::Pickup.new
       when /help/
         Logic::Help.new
       else
