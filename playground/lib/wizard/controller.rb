@@ -35,7 +35,7 @@ module Wizard
       when /walk/i
         puts "walk"
       when /inventory/i
-        puts "inventory"
+        Logic::Inventory.new
       when /pickup/i
         puts "pickup"
       when /help/

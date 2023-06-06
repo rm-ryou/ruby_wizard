@@ -7,6 +7,7 @@ module Wizard::Logic
     end
 
     def exec
+      return "No option are included in this command." if !!@option
       msg = []
       msg << describe_location(@@cur_location) <<
         describe_object(@@cur_location) <<

@@ -5,9 +5,10 @@ module Wizard::Logic
     include Wizard::Edge
 
     attr_accessor :cur_location
-    @@cur_location = :living
 
     def initialize
+      @@cur_location = :living
+      @@items = []
       super
     end
 
