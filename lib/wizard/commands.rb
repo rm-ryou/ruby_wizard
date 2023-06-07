@@ -1,0 +1,6 @@
+require_relative './commands/command'
+require_relative './commands/look'
+require_relative './commands/walk'
+require_relative './commands/inventory'
+require_relative './commands/pickup'
+require_relative './commands/help'

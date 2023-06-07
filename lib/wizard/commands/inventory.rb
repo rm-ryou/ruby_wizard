@@ -1,5 +1,5 @@
-module Wizard::Logic
-  class Inventory < Wizard::Logic::Command
+module Wizard::Commands
+  class Inventory < Wizard::Commands::Command
     attr_accessor :option
 
     def initialize

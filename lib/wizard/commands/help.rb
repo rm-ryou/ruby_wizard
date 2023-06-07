@@ -1,5 +1,5 @@
-module Wizard::Logic
-  class Help < Wizard::Logic::Command
+module Wizard::Commands
+  class Help < Wizard::Commands::Command
     attr_accessor :option
 
     HELP_MSG =<<EOM.freeze

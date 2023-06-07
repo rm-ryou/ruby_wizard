@@ -1,5 +1,5 @@
-module Wizard::Logic
-  class Pickup < Wizard::Logic::Command
+module Wizard::Commands
+  class Pickup < Wizard::Commands::Command
     attr_accessor :option
 
     def initialize

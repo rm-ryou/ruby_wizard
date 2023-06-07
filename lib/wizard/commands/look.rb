@@ -1,5 +1,5 @@
-module Wizard::Logic
-  class Look < Wizard::Logic::Command
+module Wizard::Commands
+  class Look < Wizard::Commands::Command
     attr_accessor :option
 
     def initialize

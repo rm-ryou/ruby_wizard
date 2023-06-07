@@ -31,15 +31,15 @@ module Wizard
     def get_command(command)
       case command
       when /look/i
-        Logic::Look.new
+        Commands::Look.new
       when /walk/i
-        Logic::Walk.new
+        Commands::Walk.new
       when /inventory/i
-        Logic::Inventory.new
+        Commands::Inventory.new
       when /pickup/i
-        Logic::Pickup.new
+        Commands::Pickup.new
       when /help/
-        Logic::Help.new
+        Commands::Help.new
       else
         return nil, "invalid command."
       end

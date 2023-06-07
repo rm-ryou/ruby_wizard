@@ -1,5 +1,5 @@
-module Wizard::Logic
-  class Walk < Wizard::Logic::Command
+module Wizard::Commands
+  class Walk < Wizard::Commands::Command
     attr_accessor :option
 
     def initialize

@@ -1,4 +1,4 @@
-module Wizard::Logic
+module Wizard::Commands
   class Command
     include Wizard::Location
     include Wizard::Object
