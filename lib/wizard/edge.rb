@@ -7,18 +7,14 @@ module Wizard::Edge
   end
 
   def describe_edge(place)
-    eval <<-END_OF_DEF
-      msg = []
-      @edge_#{place}.each do |key, val|
-        msg << "there is a " + val + " going " + key.to_s + " from here."
-      end
-      msg
-    END_OF_DEF
+    msg = []
+    get_instance_val("edge", place).each do |key, val|
+      msg << "there is a " + val + " going " + key.to_s + " from here."
+    end
+    msg
   end
 
   def get_edge(place)
-    eval <<-END_OF_DEF
-      @edge_#{place}.keys
-    END_OF_DEF
+    get_instance_val("edge", place).keys
   end
 end

@@ -9,9 +9,7 @@ module Wizard
     end
 
     def describe_location(place)
-      eval <<-END_OF_DEF
-        @location_#{place}
-      END_OF_DEF
+      get_instance_val("location", place)
     end
   end
 end

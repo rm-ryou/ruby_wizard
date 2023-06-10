@@ -13,6 +13,9 @@ module Wizard::Commands
       super
     end
 
+    def get_instance_val(name, place)
+      instance_variable_get("@#{name}_#{place}")
+    end
   end
 end
 

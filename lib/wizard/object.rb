@@ -6,19 +6,16 @@ module Wizard::Object
   end
 
   def describe_object(place)
-    eval <<-END_OF_DEF
-      msg = []
-      return msg if !@object_#{place}
-      @object_#{place}.each do |val|
-        msg << "you see a " + val + " on the floor."
-      end
-      msg
-    END_OF_DEF
+    objects = get_instance_val("object", place)
+    msg = []
+    return msg unless objects
+    objects.each do |object|
+      msg << "you see a " + object + " on the floor."
+    end
+    msg
   end
 
   def get_objects(place)
-    eval <<-END_OF_DEF
-      return @object_#{place} || []
-    END_OF_DEF
+    get_instance_val("object", place) || []
   end
 end

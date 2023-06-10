@@ -3,17 +3,15 @@ module Wizard
 
     def initialize
       super
-      @downstairs = :living
-      @east = :living
-      @west = :garden
-      @upstairs = :attic
+      @connect_downstairs = :living
+      @connect_east = :living
+      @connect_west = :garden
+      @connect_upstairs = :attic
     end
 
     def move_place(place, directions)
-      eval <<-END_OF_DEF
-        directions.each { |val| return @#{place} if val.to_s == place }
-        return nil
-      END_OF_DEF
+      directions.each { |val| return get_instance_val("connect", place) if val.to_s == place }
+      return nil
     end
   end
 end
