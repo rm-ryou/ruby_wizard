@@ -3,6 +3,13 @@
 $:.unshift File.join(__dir__, '../lib')
 require "wizard"
 
+USAGE =<<EOF
+Commands:
+  ./wizard          # start game
+  ./wizard digraph  # create directed graph
+  ./wizard graph    # create undirected graph
+EOF
+
 begin
   case ARGV[0]
   when /^digraph$/i
@@ -15,5 +22,5 @@ begin
     raise RuntimeError
   end
 rescue RuntimeError
-  puts "invalid arguments."
+  puts USAGE
 end
