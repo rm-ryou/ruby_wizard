@@ -3,5 +3,17 @@
 $LOAD_PATH.unshift File.join(__dir__, '../lib')
 require "wizard"
 
-# puts "test"
-Wizard::Controller.new.repl
+begin
+  case ARGV[0]
+  when /^graph$/i
+    Wizard::Graph::Create.new.graph_png
+  when /^ugraph$/i
+    Wizard::Graph::Create.new.ugraph_png
+  when nil
+    Wizard::Controller.new.repl
+  else
+    raise RuntimeError
+  end
+rescue RuntimeError
+  puts "invalid arguments."
+end
