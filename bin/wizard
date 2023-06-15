@@ -1,14 +1,14 @@
 #! /usr/bin/env ruby
 
-$LOAD_PATH.unshift File.join(__dir__, '../lib')
+$:.unshift File.join(__dir__, '../lib')
 require "wizard"
 
 begin
   case ARGV[0]
+  when /^digraph$/i
+    Wizard::Map::DiGraph.new.graph_png
   when /^graph$/i
-    Wizard::Graph::Create.new.graph_png
-  when /^ugraph$/i
-    Wizard::Graph::Create.new.ugraph_png
+    Wizard::Map::UndirectedGraph.new.graph_png
   when nil
     Wizard::Controller.new.repl
   else
